@@ -1,0 +1,137 @@
+.categorie-section {
+    @include for-lg {
+        margin-top: 1em;
+    }
+
+    .categorie-wrapper {
+        position: relative;
+        // overflow: hidden; //extra
+        .fa-arrow {
+            display: none;
+            @include for-sm {
+                display: block;
+            }
+            position: absolute;
+            top: 50%;
+            padding: 0;
+            padding-inline: 5px;
+            margin: 0;
+            transform: translateY(-100%);
+            cursor: pointer;
+            &-left {
+                left: 0;
+                z-index: 999;
+            }
+            &-right {
+                right: 0;
+                z-index: 999;
+            }
+        }
+        .dots-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .dot {
+            background: $dark;
+            margin: 0.5em;
+            height: 8px;
+            width: 8px;
+            border-radius: 100%;
+            opacity: 0.25;
+            border: none;
+            cursor: pointer;
+
+            &.active {
+                opacity: 1;
+            }
+
+            &:focus,
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.categorie-grid {
+    display: grid;
+    width: 90%; // 90
+    height: 100%;
+    margin-inline: auto;
+    grid-auto-flow: column;
+    grid-auto-columns: 60%;
+    gap: 1rem;
+    // animation: scroll 40s linear infinite;
+    overflow-x: hidden;
+
+    @include for-sm {
+        grid-auto-columns: 30%;
+    }
+
+    .categorie-card {
+        display: grid;
+        position: relative;
+        grid-template-rows: min-content;
+        gap: 3rem;
+        cursor: pointer;
+        transition: transform 500ms ease-in;
+        text-align: center;
+
+        img {
+            inline-size: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        h3 {
+            @include for-xs {
+                font-size: 16px;
+            }
+            position: absolute;
+            color: $light;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .overlay {
+            background: $dark;
+            opacity: 0.3;
+            position: absolute;
+            inset: 0;
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+::-webkit-scrollbar {
+    height: 0.37rem;
+    width: 0.37rem;
+}
+
+::-webkit-scrollbar-track {
+    background: $light;
+    border-radius: 100vw;
+    margin-block: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 100vw;
+}
+
+@supports (scrollbar-color: $primary $light) {
+    * {
+        scrollbar-color: $primary $light;
+        scrollbar-width: thin;
+    }
+}

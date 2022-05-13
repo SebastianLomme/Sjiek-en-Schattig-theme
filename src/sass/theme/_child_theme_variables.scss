@@ -1,0 +1,20 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/assets/bootstrap5/_variables.scss, paste it here and edit the value.
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;900&family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap");
+
+// $pink: #FFC0CB;  // Thats a sample how you could change a BootStrap variable.
+$primary: #fcc4d2; // Once we've changed the value, we'll also make it the primary brand color.
+$secondary: #f98065;
+$dark: #25324e;
+$light: #fff6f8;
+$light: $light;
+$info: #b4c4e7;
+
+@font-face {
+    font-display: swap;
+}
+
+$ff-primary: "Roboto", sans-serif;
+$ff-secondary: "Roboto Slab", serif;

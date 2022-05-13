@@ -1,0 +1,110 @@
+.new-arrival-section {
+    margin-top: 5em;
+    background: $primary;
+    color: $dark;
+
+    h3 {
+        padding-block: 1.5em;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1em;
+        row-gap: 1em;
+        padding-inline: 0;
+        padding-bottom: 3em;
+        align-items: center;
+        justify-content: stretch;
+        margin-bottom: 0;
+
+        .product {
+            margin: 1em;
+            justify-self: stretch;
+
+            &:nth-of-type(7),
+            &:nth-of-type(8) {
+                display: none;
+
+                @include for-lg {
+                    display: grid;
+                }
+            }
+
+            a {
+                color: $dark;
+                text-decoration: none;
+            }
+
+            .btn {
+                color: $dark;
+                font-weight: 700;
+                font-size: 12px;
+                width: fit-content;
+            }
+        }
+
+        @include for-md {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include for-lg {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .woocommerce-loop-product__title {
+            font-size: 12px;
+            font-weight: 700;
+
+            margin: 1em;
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+            display: grid;
+            height: 100%;
+            justify-content: stretch;
+            position: relative;
+        }
+
+        .add-to-cart-container {
+            display: grid;
+            align-self: end;
+            position: relative;
+            justify-content: center;
+
+            .add_to_cart_button {
+                @extend .fa;
+                @extend .fa-shopping-cart;
+            }
+
+            .wc-forward {
+                position: absolute;
+                top: -2em;
+                z-index: 100;
+            }
+        }
+    }
+}
+
+div#page.site
+    div#woocommerce-wrapper.wrapper
+    div#content.container
+    div.row
+    div#primary.col-md.content-area
+    main#main.site-main
+    header.woocommerce-products-header
+    nav.woocommerce-breadcrumb {
+    color: $dark;
+
+    a {
+        color: $dark;
+    }
+}
+
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals {
+    float: right;
+    width: 100%;
+}

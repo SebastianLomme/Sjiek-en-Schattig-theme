@@ -1,0 +1,114 @@
+.wrapper-archive-page {
+    .products {
+        &:before {
+            display: none !important;
+        }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1em;
+        row-gap: 1em;
+        margin: 1em;
+
+        img {
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+        // padding: 1em;
+
+        .product {
+            // margin: 1em;
+            justify-self: stretch;
+            text-align: center;
+            line-height: 1.5em;
+            width: 100% !important;
+            a {
+                color: $dark;
+                text-decoration: none;
+            }
+
+            .btn {
+                color: $dark;
+                font-weight: 700;
+                font-size: 12px;
+                width: fit-content !important;
+            }
+        }
+
+        @include for-md {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include for-lg {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .woocommerce-loop-product__title {
+            text-align: center;
+            line-height: 1.5 !important;
+            // font-size: 12px;
+            // font-weight: 700;
+
+            // margin: 1em;
+            // text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+            display: grid;
+            height: 100%;
+            justify-content: stretch;
+            position: relative;
+        }
+
+        .add-to-cart-container {
+            display: grid;
+            align-self: end;
+            position: relative;
+            margin-bottom: 50px;
+            justify-content: center;
+
+            .add_to_cart_button {
+                @extend .fa;
+                @extend .fa-shopping-cart;
+            }
+
+            .wc-forward {
+                position: absolute;
+                top: -2em;
+                z-index: 100;
+            }
+        }
+    }
+}
+
+.form-select {
+    background-color: $primary;
+    color: $dark;
+}
+
+.page-numbers {
+    background: $primary;
+    color: $dark;
+}
+
+.woocommerce nav.woocommerce-pagination ul,
+.woocommerce nav.woocommerce-pagination ul li {
+    border: none;
+    .fa {
+        padding-left: 0;
+    }
+}
+
+.woocommerce nav.woocommerce-pagination ul li a:focus,
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current {
+    color: $light;
+    background: $dark;
+    border: none;
+
+    ::before {
+        color: $light;
+        padding: 0;
+        margin: 0;
+    }
+}

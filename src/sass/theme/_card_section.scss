@@ -1,0 +1,41 @@
+.card-section {
+    background: $dark;
+    align-items: center;
+    justify-content: center;
+
+    .card-item {
+        padding: 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+            padding: 1em;
+        }
+
+        &__card-pay {
+            border-bottom: 1px solid $light;
+        }
+
+        @include for-md {
+            &__card-pay {
+                border-bottom: none;
+                border-right: 1px solid $light;
+            }
+        }
+    }
+
+    .card-icon {
+        fill: $light !important;
+        height: 50%;
+    }
+
+    .card-item {
+        // width: 80%;
+        color: $light;
+
+        img {
+            color: $light;
+        }
+    }
+}

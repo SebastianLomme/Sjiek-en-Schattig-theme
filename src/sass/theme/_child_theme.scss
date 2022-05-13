@@ -1,0 +1,121 @@
+// <------- Add your styles into this fil
+@import "hero";
+@import "nav";
+@import "categorie";
+@import "archive";
+@import "woocommerce";
+@import "single_product";
+@import "footer";
+@import "contact-form7";
+@import "card_section";
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap");
+
+*:focus {
+    outline-style: none !important;
+}
+
+body {
+    font-family: $ff-primary;
+    color: $dark;
+    background: $light;
+    font-size: 16px;
+    overflow-x: hidden;
+
+    @include for-md {
+        font-size: 20px;
+    }
+}
+
+#page {
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $ff-secondary;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 26px;
+
+    @include for-sm {
+        font-size: 32px;
+    }
+
+    @include for-md {
+        font-size: 48px;
+    }
+
+    @include for-lg {
+        font-size: 64px;
+    }
+}
+
+h2 {
+    font-size: 24px;
+
+    @include for-md {
+        font-size: 38px;
+    }
+}
+
+h3 {
+    font-size: 20px;
+
+    @include for-md {
+        font-size: 26px;
+    }
+}
+
+h4 {
+    font-size: 18px;
+
+    @include for-md {
+        font-size: 23px;
+    }
+}
+
+a {
+    color: $dark;
+}
+
+.rel {
+    position: relative;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.entry-content {
+    .wp-block-group {
+        padding-block: 2em;
+        a {
+            color: $light;
+        }
+
+        &:nth-child(odd) {
+            background-color: $dark;
+            color: $light;
+
+            a {
+                color: $light;
+            }
+        }
+
+        &__inner-container {
+            @extend .container;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,40 @@
+.hero-img {
+    max-width: 100%;
+    max-height: 600px;
+}
+
+// .hero-btn {
+//     position: absolute;
+//     justify-self: flex-end;
+//     align-self: flex-end;
+// }
+
+.hero-section {
+    margin-bottom: 3rem;
+
+    @include for-xs {
+        h1 {
+            padding: 0;
+        }
+    }
+}
+
+.circle-hero {
+    position: absolute;
+    width: 200vw;
+    height: 200vw;
+    bottom: -10vw;
+    left: -10vw;
+    background: #fcc4d2;
+    border-radius: 100%;
+    z-index: -1;
+    // overflow: hidden;
+
+    @include for-md {
+        left: -20vw;
+    }
+    @include for-lg {
+        left: -30vw;
+        bottom: -5vw;
+    }
+}

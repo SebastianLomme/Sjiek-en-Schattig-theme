@@ -1,0 +1,71 @@
+// nav //
+.nav-link {
+    font-weight: 700;
+    justify-content: center;
+    // color: $dark !important;
+}
+
+.dropdown-menu {
+    border: none;
+    background: inherit;
+
+    @include for-md {
+        background: $light;
+        width: 20rem;
+        border: solid 1px;
+    }
+}
+
+.fa {
+    padding-left: 0.625rem;
+    color: $dark;
+}
+
+.navbar-custom-icons {
+    font-size: 1.25rem;
+}
+
+.navbar {
+    position: relative;
+}
+
+.navbar-brand {
+    width: 150px !important;
+}
+
+.search-box {
+    position: absolute;
+    top: 90%;
+    right: 20px;
+    border: solid 0.5px $dark;
+    border-radius: 5px;
+    z-index: 9;
+}
+
+.navbar-custom-icons .fa {
+    padding: 0.25rem;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        color: $secondary;
+
+        .small-text {
+            background: $secondary !important;
+            color: $dark !important;
+        }
+    }
+}
+
+.cart-customlocation {
+    color: black;
+}
+
+.hide {
+    display: none;
+}
+
+.small-text {
+    font-size: 0.5rem;
+    font-weight: 700;
+}

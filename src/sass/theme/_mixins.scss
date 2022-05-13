@@ -1,0 +1,54 @@
+@mixin for-xs {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+@mixin for-sm {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+@mixin for-md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+@mixin for-lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+@mixin for-xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+@mixin for-xxl {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin make-container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+
+    @include for-sm {
+        max-width: 540px;
+    }
+    @include for-md {
+        max-width: 720px;
+    }
+    @include for-lg {
+        max-width: 960px;
+    }
+    @include for-xl {
+        max-width: 1140px;
+    }
+    @include for-xxl {
+        max-width: 1320px;
+    }
+}
