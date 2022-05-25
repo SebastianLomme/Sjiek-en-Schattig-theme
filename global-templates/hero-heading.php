@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <?php echo get_theme_mod('hero-settings-text'); ?>
                     </p>
                     <div>
-                        <a href="<?php echo get_site_url() . '/winkel'; ?> " class="btn btn-secondary py-1 hero-button">
+                        <a href="<?php echo get_site_url() . '/assortiment/'; ?> " class="btn btn-secondary py-1 hero-button">
                             Assortiment<i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
